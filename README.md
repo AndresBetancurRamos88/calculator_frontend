@@ -27,5 +27,20 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Deploy on AWS
+```
+Go to AWS S3 an create a bucket
+
+Check the option "ACLs enabled"
+Uncheck the option "Block all public access"
+create the bucket
+
+Go to your bucket in the properties tab and at the end edit "Static website hosting"
+    - Static website hosting: Enable
+    - Hosting type: Host a static website
+    - Index document: index.html
+    - save changes'
+Go to your bucket and click on upload, then drag the files from the "dist" folder and drop them into the bucket
+scoll down and in the "Access" for "Everyone" check "Read"
+
+```
